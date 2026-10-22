@@ -1,4 +1,4 @@
-const CACHE = "dv-i18n-v15";
+const CACHE = "dv-i18n-v16";
 const FILES = [
   "/",
   "/index.html",

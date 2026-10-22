@@ -741,7 +741,7 @@
       @media print {
         @page {
           size: A4 portrait;
-          margin: 16mm;
+          margin: 0;
         }
         body.printing-report > header,
         body.printing-report > nav,
@@ -759,8 +759,11 @@
         body.printing-report #print-report {
           display: block !important;
           width: 100%;
-          max-width: 178mm;
+          max-width: 210mm;
           margin: 0 auto;
+          padding: 12mm 16mm;
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
           color: #172338;
           background: #fff;
           font: 8.5pt/1.38 "Segoe UI", Arial, sans-serif;

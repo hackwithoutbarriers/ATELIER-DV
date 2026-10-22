@@ -57,8 +57,8 @@ assert.ok(en.app.workbook.title.includes("{name}"), "English workbook title must
 assert.match(app, /function applicantName\(\)/, "Export naming must read the principal applicant name");
 assert.match(app, /function exportFilename\(extension\)/, "Export filenames must include a safe name");
 assert.match(css, /@page\s*\{\s*size:\s*A4 portrait;/, "PDF print layout must use A4 portrait");
-assert.match(css, /@page\s*\{[^}]*margin:\s*16mm;/s, "PDF print layout must retain 16 mm page margins");
-assert.match(css, /max-width:\s*178mm;/, "PDF report width must fit within the A4 page margins");
+assert.match(css, /@page\s*\{[^}]*margin:\s*0;/s, "PDF page margins must not depend on browser print settings");
+assert.match(css, /max-width:\s*210mm;[^}]*padding:\s*12mm 16mm;[^}]*box-decoration-break:\s*clone;/s, "PDF report must retain in-page margins on every sheet");
 assert.match(css, /body\.printing-report > header/, "Print stylesheet must preserve the report header");
 
 const frenchPatterns = [
