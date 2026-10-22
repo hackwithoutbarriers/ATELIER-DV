@@ -826,14 +826,6 @@
           letter-spacing: 0.1em;
           text-transform: uppercase;
         }
-        body.printing-report #print-report .report-cover h1 {
-          min-width: 0;
-          margin: 0;
-          color: #143a75;
-          font-size: 21pt;
-          line-height: 1.16;
-          letter-spacing: -0.035em;
-        }
         body.printing-report #print-report .report-applicant {
           display: flex;
           flex-wrap: wrap;
