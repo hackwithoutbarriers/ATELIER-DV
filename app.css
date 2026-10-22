@@ -739,8 +739,12 @@
         display: none;
       }
       @media print {
-        header,
-        nav,
+        @page {
+          size: A4 portrait;
+          margin: 10mm 12mm;
+        }
+        body.printing-report > header,
+        body.printing-report > nav,
         .noprint,
         .dlg,
         .cs {
@@ -754,9 +758,14 @@
         }
         body.printing-report #print-report {
           display: block !important;
+          width: 100%;
+          max-width: 182mm;
+          margin: 0 auto;
           color: #172338;
           background: #fff;
-          font: 9.5pt/1.45 Arial, sans-serif;
+          font: 8.5pt/1.38 "Segoe UI", Arial, sans-serif;
+          orphans: 2;
+          widows: 2;
           -webkit-print-color-adjust: exact;
           print-color-adjust: exact;
         }
@@ -766,59 +775,122 @@
         body.printing-report #print-report .report-header {
           display: flex;
           align-items: center;
-          gap: 14px;
-          padding-bottom: 12px;
-          border-bottom: 2px solid #1f4e9c;
+          justify-content: space-between;
+          gap: 12px;
+          padding: 0 0 6px;
+          border-bottom: 1px solid #dbe3ee;
         }
         body.printing-report #print-report .report-header img {
-          width: 52px;
-          height: 52px;
+          width: 36px;
+          height: 36px;
         }
-        body.printing-report #print-report .report-header p,
-        body.printing-report #print-report .report-meta,
-        body.printing-report #print-report .report-header span {
-          margin: 0;
-          color: #536176;
-          font-size: 9pt;
+        body.printing-report #print-report .report-brand {
+          display: flex;
+          align-items: center;
+          gap: 9px;
         }
-        body.printing-report #print-report .report-header h1 {
-          min-width: 0;
-          margin: 2px 0;
+        body.printing-report #print-report .report-brand div {
+          display: grid;
+          gap: 1px;
+        }
+        body.printing-report #print-report .report-brand strong {
           color: #143a75;
-          font-size: 20pt;
+          font-size: 11pt;
+          letter-spacing: 0.01em;
+        }
+        body.printing-report #print-report .report-brand span,
+        body.printing-report #print-report .report-session {
+          color: #536176;
+          font-size: 8pt;
+        }
+        body.printing-report #print-report .report-session {
+          padding: 3px 8px;
+          border: 1px solid #dbe3ee;
+          border-radius: 999px;
+          background: #f5f8fc;
+          color: #143a75;
+          font-weight: 700;
+        }
+        body.printing-report #print-report .report-cover {
+          padding: 11px 0 9px;
+          border-bottom: 2px solid #1f4e9c;
+        }
+        body.printing-report #print-report .report-eyebrow {
+          margin: 0 0 4px;
+          color: #1f4e9c;
+          font-size: 8pt;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+        body.printing-report #print-report .report-cover h1 {
+          min-width: 0;
+          margin: 0;
+          color: #143a75;
+          font-size: 21pt;
+          line-height: 1.16;
+          letter-spacing: -0.035em;
+        }
+        body.printing-report #print-report .report-applicant {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: baseline;
+          gap: 4px 9px;
+          margin-top: 8px;
+        }
+        body.printing-report #print-report .report-applicant span,
+        body.printing-report #print-report .report-generated {
+          color: #536176;
+          font-size: 8.5pt;
+        }
+        body.printing-report #print-report .report-applicant strong {
+          color: #172338;
+          font-size: 11pt;
+          font-weight: 700;
+        }
+        body.printing-report #print-report .report-generated {
+          margin: 4px 0 0;
         }
         body.printing-report #print-report .report-privacy {
-          margin: 10px 0 16px;
-          padding: 8px 10px;
+          margin: 8px 0 10px;
+          padding: 6px 9px;
+          border: 1px solid #f0d48b;
           border-left: 3px solid #f2a900;
-          background: #fff8e6;
-          color: #463607;
-          font-size: 9pt;
+          border-radius: 3px 8px 8px 3px;
+          background: #fff9eb;
+          color: #594515;
+          font-size: 8pt;
+        }
+        body.printing-report #print-report .report-section {
+          margin: 0 0 9px;
+          break-inside: auto;
         }
         body.printing-report #print-report h2 {
-          margin: 17px 0 7px;
-          padding-bottom: 4px;
-          border-bottom: 1px solid #d8dee8;
+          margin: 10px 0 5px;
+          padding: 0 0 3px;
+          border-bottom: 1px solid #dbe3ee;
           color: #143a75;
-          font-size: 12pt;
+          font-size: 11pt;
+          line-height: 1.25;
           break-after: avoid;
         }
         body.printing-report #print-report h3 {
-          margin: 11px 0 5px;
+          margin: 7px 0 3px;
           color: #263b59;
-          font-size: 10pt;
+          font-size: 9pt;
           break-after: avoid;
         }
         body.printing-report #print-report table {
           width: 100%;
-          margin: 5px 0 12px;
+          margin: 3px 0 6px;
           border-collapse: collapse;
-          font-size: 8.5pt;
+          table-layout: fixed;
+          font-size: 7.8pt;
         }
         body.printing-report #print-report th,
         body.printing-report #print-report td {
-          padding: 6px 8px;
-          border: 1px solid #d8dee8;
+          padding: 3.5px 6px;
+          border-bottom: 1px solid #e3e8f0;
           text-align: left;
           vertical-align: top;
           overflow-wrap: anywhere;
@@ -831,35 +903,54 @@
           background: #eef3fb;
           font-weight: 700;
         }
+        body.printing-report #print-report thead th:first-child {
+          border-radius: 5px 0 0 0;
+        }
+        body.printing-report #print-report thead th:last-child {
+          border-radius: 0 5px 0 0;
+        }
         body.printing-report #print-report tbody th {
           width: 38%;
-          background: #f8f9fc;
+          color: #34445c;
+          background: #f7f9fc;
           font-weight: 600;
         }
         body.printing-report #print-report tbody th small {
           display: block;
           margin-top: 2px;
           color: #68758a;
-          font-size: 7.5pt;
+          font-size: 7.2pt;
           font-weight: 400;
         }
         body.printing-report #print-report tr {
           break-inside: avoid;
+        }
+        body.printing-report #print-report .report-profiles > .report-section {
+          margin: 0 0 8px;
+          break-inside: auto;
         }
         body.printing-report #print-report .report-empty {
           color: #8a94a3;
           font-style: italic;
         }
         body.printing-report #print-report .report-disclaimer {
-          margin-top: 18px;
-          padding-top: 9px;
+          display: flex;
+          justify-content: space-between;
+          gap: 16px;
+          margin-top: 10px;
+          padding-top: 6px;
           border-top: 1px solid #d8dee8;
           color: #536176;
-          font-size: 8pt;
+          font-size: 7.5pt;
         }
-        @page {
-          size: auto;
-          margin: 15mm 13mm;
+        body.printing-report #print-report .report-disclaimer span {
+          flex: none;
+          color: #143a75;
+          font-weight: 700;
+        }
+        body.printing-report #print-report .report-disclaimer p {
+          margin: 0;
+          text-align: right;
         }
       }
       .brand {

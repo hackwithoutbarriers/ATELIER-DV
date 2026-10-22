@@ -137,11 +137,13 @@
       "rights": "Tous droits réservés.",
       "languageAria": "Langue",
       "fileBase": "dossier-dv",
+      "unnamedFile": "sans-nom",
       "sheetName": "Dossier DV",
       "listedSpouse": "Conjoint(e) déclaré(e)",
       "reportTitle": "Votre dossier DV",
       "reportSubtitle": "Dossier de préparation · {session}",
       "reportGenerated": "Généré le {date}",
+      "reportPreparedFor": "Préparé pour",
       "reportPrivacy": "Document confidentiel — vos données restent sur votre appareil.",
       "reportDisclaimer": "Document de préparation non officiel. Il ne constitue pas une candidature DV.",
       "reportOverview": "Situation",
@@ -159,7 +161,7 @@
       "sheetChecklistName": "Checklist"
     },
     "workbook": {
-      "title": "Fiche de préparation DV Lottery",
+      "title": "Fiche de préparation DV Lottery · {name}",
       "childTabName": "Enfant",
       "entryTitle": "Candidature {number} — demandeur principal : {name}",
       "childTitle": "Enfant {number} — déclaré dans les candidatures concernées",

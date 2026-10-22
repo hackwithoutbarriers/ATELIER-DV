@@ -62,7 +62,7 @@ python -m http.server 8000
 
 Open `http://localhost:8000/` and `http://localhost:8000/en/` in a browser. Test the tips, every marital status, each form tab, child age checks, checklist and result states, save/share dialogs, analytics consent, and FR↔EN switching with populated data. Confirm the save dialog offers PDF/print and Excel only, with no CSV, JSON backup, Google Sheets or backup restoration controls in either language. Test offline mode after each language has been visited once.
 
-The save dialog offers a print-ready, branded PDF report with profile details, entry tracking and checklist; choose “Save as PDF” in the browser print dialog. Excel exports use the local template and include sheets for applicants and children, plus localized checklist and entry-tracking sheets. CSV, JSON backup, Google Sheets actions and backup restoration are not offered in the dialog. After printing, the app restores the tab, URL and scroll position that were open before printing.
+The save dialog offers a print-ready, branded A4 PDF report with a personalized cover, profile details, entry tracking and checklist; choose “Save as PDF” in the browser print dialog. The PDF document title and Excel filename include the principal applicant’s first and/or last name (with a localized fallback when no name is entered). Excel exports use the local template and include sheets for applicants and children, plus localized checklist and entry-tracking sheets. CSV, JSON backup, Google Sheets actions and backup restoration are not offered in the dialog. After printing, the app restores the tab, URL and scroll position that were open before printing.
 
 ## Bilingual SEO and release checklist
 

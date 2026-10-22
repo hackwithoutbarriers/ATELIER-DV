@@ -3,11 +3,12 @@ import { readFile } from "node:fs/promises";
 
 const readJson = async (file) =>
   JSON.parse(await readFile(new URL(`../${file}`, import.meta.url), "utf8"));
-const [fr, en, app, generator] = await Promise.all([
+const [fr, en, app, generator, css] = await Promise.all([
   readJson("lang/fr.json"),
   readJson("lang/en.json"),
   readFile(new URL("../app.js", import.meta.url), "utf8"),
   readFile(new URL("./build-i18n.py", import.meta.url), "utf8"),
+  readFile(new URL("../app.css", import.meta.url), "utf8"),
 ]);
 
 const flatten = (value, prefix = "") => {
@@ -51,6 +52,12 @@ assert.equal(fr.app.guide.length, 9, "Tips must contain 9 entries");
 assert.equal(en.app.guide.length, 9, "English tips must contain 9 entries");
 assert.equal(fr.app.faq.length, 6, "FAQ must contain 6 entries");
 assert.equal(en.app.faq.length, 6, "English FAQ must contain 6 entries");
+assert.ok(fr.app.workbook.title.includes("{name}"), "French workbook title must be personalized");
+assert.ok(en.app.workbook.title.includes("{name}"), "English workbook title must be personalized");
+assert.match(app, /function applicantName\(\)/, "Export naming must read the principal applicant name");
+assert.match(app, /function exportFilename\(extension\)/, "Export filenames must include a safe name");
+assert.match(css, /@page\s*\{\s*size:\s*A4 portrait;/, "PDF print layout must use A4 portrait");
+assert.match(css, /body\.printing-report > header/, "Print stylesheet must preserve the report header");
 
 const frenchPatterns = [
   /[àâçéèêëîïôùûüÿœæ]/i,

@@ -876,7 +876,7 @@ window.DV_I18N_READY.then(() => {
       }
       function reportTable(rows) {
         return `<table><thead><tr>${rows[0]
-          .map((heading) => `<th>${esc(heading)}</th>`)
+          .map((heading) => `<th scope="col">${esc(heading)}</th>`)
           .join("")}</tr></thead><tbody>${rows
           .slice(1)
           .map(
@@ -886,6 +886,24 @@ window.DV_I18N_READY.then(() => {
                 .join("")}</tr>`,
           )
           .join("")}</tbody></table>`;
+      }
+      function applicantName() {
+        return [S.me.first, S.me.last]
+          .filter((part) => typeof part === "string" && part.trim())
+          .map((part) => part.trim())
+          .join(" ");
+      }
+      function exportFilename(extension) {
+        const name = applicantName()
+          .normalize("NFKD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/[<>:"/\\|?*\u0000-\u001f]/g, "")
+          .replace(/\s+/g, "-")
+          .replace(/-+/g, "-")
+          .replace(/^[.-]+|[.-]+$/g, "")
+          .toLocaleLowerCase(lang);
+        const fallback = t("app.ui.unnamedFile");
+        return `${t("app.ui.fileBase")}-${name || fallback}.${extension}`;
       }
       function buildPrintReport() {
         const rows = flat();
@@ -964,7 +982,8 @@ window.DV_I18N_READY.then(() => {
           )
           .join("");
         const date = fmtD(new Date().toISOString().slice(0, 10));
-        $("#print-report").innerHTML = `<div class="report-header"><img src="/logo.svg" alt=""><div><p>Atelier DV</p><h1>${t("app.ui.reportTitle")}</h1><span>${t("app.ui.reportSubtitle", { session: C.session })}</span></div></div><p class="report-meta">${t("app.ui.reportGenerated", { date })}</p><p class="report-privacy">${t("app.ui.reportPrivacy")}</p><section class="report-section"><h2>${t("app.ui.reportOverview")}</h2>${overview}</section><h2>${t("app.ui.reportProfiles")}</h2>${profiles || `<p>${t("app.ui.noData")}</p>`}<section class="report-section"><h2>${t("app.ui.reportTracking")}</h2>${tracking}</section><section class="report-section"><h2>${t("app.ui.reportChecklist")}</h2>${reportTable(checklistRows())}</section><p class="report-disclaimer">${t("app.ui.reportDisclaimer")}</p>`;
+        const name = applicantName() || t("app.ui.reportNotProvided");
+        $("#print-report").innerHTML = `<header class="report-header"><div class="report-brand"><img src="/logo.svg" alt=""><div><strong>Atelier DV</strong><span>${t("app.ui.brandSubtitle")}</span></div></div><span class="report-session">${esc(C.session)}</span></header><section class="report-cover"><p class="report-eyebrow">${t("app.ui.reportSubtitle", { session: esc(C.session) })}</p><h1>${t("app.ui.reportTitle")}</h1><div class="report-applicant"><span>${t("app.ui.reportPreparedFor")}</span><strong>${esc(name)}</strong></div><p class="report-generated">${t("app.ui.reportGenerated", { date: esc(date) })}</p></section><p class="report-privacy">${t("app.ui.reportPrivacy")}</p><section class="report-section"><h2>${t("app.ui.reportOverview")}</h2>${overview}</section><section class="report-section report-profiles"><h2>${t("app.ui.reportProfiles")}</h2>${profiles || `<p>${t("app.ui.noData")}</p>`}</section><section class="report-section"><h2>${t("app.ui.reportTracking")}</h2>${tracking}</section><section class="report-section"><h2>${t("app.ui.reportChecklist")}</h2>${reportTable(checklistRows())}</section><footer class="report-disclaimer"><span>Atelier DV</span><p>${t("app.ui.reportDisclaimer")}</p></footer>`;
       }
       const csv = (R) =>
         "\ufeff" +
@@ -981,7 +1000,9 @@ window.DV_I18N_READY.then(() => {
       }
       function workbookExportData() {
         const text = {
-          title: t("app.workbook.title"),
+          title: t("app.workbook.title", {
+            name: applicantName() || t("app.ui.reportNotProvided"),
+          }),
           legend: t("app.workbook.legend"),
           notProvided: t("app.workbook.notProvided"),
           notCollected: t("app.workbook.notCollected"),
@@ -1229,10 +1250,10 @@ window.DV_I18N_READY.then(() => {
       async function exp(f) {
         track("export", { format: f });
         const R = flat();
-        const filename = t("app.ui.fileBase");
-        if (f === "csv") dl(`${filename}.csv`, "text/csv;charset=utf-8", csv(R));
+        const filename = exportFilename(f === "pdf" ? "pdf" : "xlsx");
+        if (f === "csv") dl(exportFilename("csv"), "text/csv;charset=utf-8", csv(R));
         else if (f === "json")
-          dl(`${filename}.json`, "application/json", JSON.stringify(S, null, 2));
+          dl(exportFilename("json"), "application/json", JSON.stringify(S, null, 2));
         else if (f === "tsv") {
           const text = R.map((r) => r.join("\t")).join("\n");
           try {
@@ -1249,7 +1270,7 @@ window.DV_I18N_READY.then(() => {
           const previousTitle = document.title;
           closeDialog($("#dlg"));
           buildPrintReport();
-          document.title = `${t("app.ui.reportTitle")} - ${filename}`;
+          document.title = filename;
           document.body.classList.add("printing-report");
           let cleanupTimer;
           const finishPrint = () => {
@@ -1284,13 +1305,13 @@ window.DV_I18N_READY.then(() => {
               workbookExportData(),
             );
             dl(
-              `${filename}.xlsx`,
+              filename,
               "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
               workbook,
             );
           } catch (e) {
             console.error("Excel workbook export failed.", e);
-            dl(`${filename}.csv`, "text/csv;charset=utf-8", csv(R));
+            dl(exportFilename("csv"), "text/csv;charset=utf-8", csv(R));
             msg(t("app.ui.excelFallback"));
           }
         }

@@ -137,11 +137,13 @@
       "rights": "All rights reserved.",
       "languageAria": "Language",
       "fileBase": "dv-file",
+      "unnamedFile": "unnamed",
       "sheetName": "DV file",
       "listedSpouse": "Spouse listed",
       "reportTitle": "Your DV file",
       "reportSubtitle": "Preparation file · {session}",
       "reportGenerated": "Generated on {date}",
+      "reportPreparedFor": "Prepared for",
       "reportPrivacy": "Confidential document — your information stays on your device.",
       "reportDisclaimer": "Unofficial preparation document. This is not a DV entry.",
       "reportOverview": "Overview",
@@ -159,7 +161,7 @@
       "sheetChecklistName": "Checklist"
     },
     "workbook": {
-      "title": "DV Lottery preparation file",
+      "title": "DV Lottery preparation file · {name}",
       "childTabName": "Child",
       "entryTitle": "Entry {number} — principal applicant: {name}",
       "childTitle": "Child {number} — listed on applicable entries",
