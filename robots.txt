@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://VOTRE-DOMAINE.example/sitemap.xml
+Sitemap: https://win-dv.onrender.com/sitemap.xml
