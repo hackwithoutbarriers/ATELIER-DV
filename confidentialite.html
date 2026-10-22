@@ -1,11 +1,175 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Politique de confidentialité · Atelier DV</title><meta name="description" content="Comment Atelier DV traite vos données : stockage local, mesure d’audience anonyme, vos droits."><meta name="robots" content="index,follow"><meta name="author" content="Remy A."><link rel="canonical" href="https://VOTRE-DOMAINE.example/confidentialite.html"><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#1f4e9c"><style>:root{color-scheme:light;--bg:#f3f5f9;--card:#fff;--tx:#1b2430;--mu:#5d6b7c;--pr:#1f4e9c;--bd:#d8dee8}@media(prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#12161c;--card:#1b222c;--tx:#e6ebf2;--mu:#9aa7b8;--pr:#6ea0ff;--bd:#2e3948}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
-main{max-width:780px;margin:0 auto;padding:20px 16px 50px}.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:6px 18px 14px}h1{font-size:22px}h2{font-size:16px;margin-top:22px}a{color:var(--pr)}.mu{color:var(--mu);font-size:13px}.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:inherit;font-weight:700;margin-bottom:10px}.brand img{width:34px;height:34px}.todo{background:#fff3cd;color:#5b4300;padding:0 4px;border-radius:4px}</style></head><body><main><a class="brand" href="./"><img src="logo.svg" alt="">Atelier DV</a><h1>Politique de confidentialité</h1><div class="card">
-<p class="mu">Dernière mise à jour : 21 octobre 2026.</p>
-<h2>1. Éditeur</h2><p>Atelier DV est édité par Remy A. (Cybersecurity Analyst &amp; Developer). Contact : <a href="mailto:CONTACT_EMAIL">CONTACT_EMAIL</a>.</p>
-<h2>2. Les données de votre dossier restent chez vous</h2><p>Tout ce que vous saisissez (identité, famille, adresse, passeport, etc.) est enregistré uniquement dans le stockage local de votre navigateur. Ces données ne sont pas transmises à nos serveurs et nous n’y avons pas accès. Les photos sont analysées sur votre appareil (format, dimensions, poids) : le fichier n’est ni envoyé ni conservé, seules ses caractéristiques techniques sont mémorisées. Le bouton « Réinitialiser » ou la suppression des données du site dans votre navigateur efface tout.</p>
-<h2>3. Exports, sauvegardes et partage</h2><p>Les exports (Excel, CSV, PDF, JSON) sont générés sur votre appareil. L’export Excel charge la bibliothèque SheetJS depuis le CDN cdnjs (Cloudflare), ce qui expose votre adresse IP à ce service. Ces fichiers contiennent des données personnelles : protégez-les. Les boutons de partage n’envoient que le lien de l’outil, jamais votre dossier ; ils ouvrent les services tiers concernés (WhatsApp, Telegram, etc.), soumis à leurs propres politiques.</p>
-<h2>4. Mesure d’audience</h2><p>Si elle est activée, la mesure d’audience (Google Analytics 4, ou Plausible sans cookie) ne se charge qu’après votre consentement pour Google Analytics. Seuls des événements anonymes sont collectés (onglet consulté, export, partage), jamais le contenu de votre dossier, avec anonymisation de l’adresse IP. Vous pouvez modifier votre choix à tout moment via le lien « Mesure d’audience » en bas de page.</p>
-<h2>5. Hébergement et journaux techniques</h2><p>L’hébergeur peut enregistrer des journaux techniques (adresse IP, date, pages demandées) pour assurer la sécurité et le fonctionnement du service.</p>
-<h2>6. Vos droits</h2><p>Conformément à la loi togolaise n° 2019-014 du 29 octobre 2019 relative à la protection des données à caractère personnel et, le cas échéant, au RGPD, vous disposez de droits d’accès, de rectification, d’effacement et d’opposition. Les données de votre dossier n’étant pas détenues par l’éditeur, vous les exercez directement sur votre appareil ; pour les données de mesure d’audience, écrivez-nous. Vous pouvez saisir l’autorité de protection des données de votre pays.</p>
-<h2>7. Sécurité</h2><p>Le site est servi en HTTPS avec des en-têtes de sécurité. Utilisez de préférence un appareil personnel et ne partagez pas vos fichiers d’export.</p></div><p class="mu">© 2026 Remy A. · Cybersecurity Analyst & Developer. Tous droits réservés. <a href="./">Retour à l’outil</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="mentions-legales.html">Mentions légales et conditions</a></p></main></body></html>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Politique de confidentialité · Atelier DV</title>
+    <meta
+      name="description"
+      content="Comment Atelier DV traite vos données : stockage local, mesure d’audience anonyme, vos droits."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Remy A." />
+    <link
+      rel="canonical"
+      href="https://VOTRE-DOMAINE.example/confidentialite.html"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#1f4e9c" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f3f5f9;
+        --card: #fff;
+        --tx: #1b2430;
+        --mu: #5d6b7c;
+        --pr: #1f4e9c;
+        --bd: #d8dee8;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+          --bg: #12161c;
+          --card: #1b222c;
+          --tx: #e6ebf2;
+          --mu: #9aa7b8;
+          --pr: #6ea0ff;
+          --bd: #2e3948;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--tx);
+        font:
+          15px/1.6 system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          Arial,
+          sans-serif;
+        padding: env(safe-area-inset-top, 0) 0 env(safe-area-inset-bottom, 0);
+      }
+      main {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 20px 16px 50px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--bd);
+        border-radius: 12px;
+        padding: 6px 18px 14px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      h2 {
+        font-size: 16px;
+        margin-top: 22px;
+      }
+      a {
+        color: var(--pr);
+      }
+      .mu {
+        color: var(--mu);
+        font-size: 13px;
+      }
+      .brand {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .brand img {
+        width: 34px;
+        height: 34px;
+      }
+      .todo {
+        background: #fff3cd;
+        color: #5b4300;
+        padding: 0 4px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="brand" href="./"><img src="logo.svg" alt="" />Atelier DV</a>
+      <h1>Politique de confidentialité</h1>
+      <div class="card">
+        <p class="mu">Dernière mise à jour : 21 octobre 2026.</p>
+        <h2>1. Éditeur</h2>
+        <p>
+          Atelier DV est édité par Remy A. (Cybersecurity Analyst &amp;
+          Developer). Contact :
+          <a href="mailto:agbokpeablamvi@gmail.com">CONTACT_EMAIL</a>.
+        </p>
+        <h2>2. Les données de votre dossier restent chez vous</h2>
+        <p>
+          Tout ce que vous saisissez (identité, famille, adresse, passeport,
+          etc.) est enregistré uniquement dans le stockage local de votre
+          navigateur. Ces données ne sont pas transmises à nos serveurs et nous
+          n’y avons pas accès. Les photos sont analysées sur votre appareil
+          (format, dimensions, poids) : le fichier n’est ni envoyé ni conservé,
+          seules ses caractéristiques techniques sont mémorisées. Le bouton «
+          Réinitialiser » ou la suppression des données du site dans votre
+          navigateur efface tout.
+        </p>
+        <h2>3. Exports, sauvegardes et partage</h2>
+        <p>
+          Les exports (Excel, CSV, PDF, JSON) sont générés sur votre appareil.
+          L’export Excel charge la bibliothèque SheetJS depuis le CDN cdnjs
+          (Cloudflare), ce qui expose votre adresse IP à ce service. Ces
+          fichiers contiennent des données personnelles : protégez-les. Les
+          boutons de partage n’envoient que le lien de l’outil, jamais votre
+          dossier ; ils ouvrent les services tiers concernés (WhatsApp,
+          Telegram, etc.), soumis à leurs propres politiques.
+        </p>
+        <h2>4. Mesure d’audience</h2>
+        <p>
+          Si elle est activée, la mesure d’audience (Google Analytics 4, ou
+          Plausible sans cookie) ne se charge qu’après votre consentement pour
+          Google Analytics. Seuls des événements anonymes sont collectés (onglet
+          consulté, export, partage), jamais le contenu de votre dossier, avec
+          anonymisation de l’adresse IP. Vous pouvez modifier votre choix à tout
+          moment via le lien « Mesure d’audience » en bas de page.
+        </p>
+        <h2>5. Hébergement et journaux techniques</h2>
+        <p>
+          L’hébergeur peut enregistrer des journaux techniques (adresse IP,
+          date, pages demandées) pour assurer la sécurité et le fonctionnement
+          du service.
+        </p>
+        <h2>6. Vos droits</h2>
+        <p>
+          Conformément à la loi togolaise n° 2019-014 du 29 octobre 2019
+          relative à la protection des données à caractère personnel et, le cas
+          échéant, au RGPD, vous disposez de droits d’accès, de rectification,
+          d’effacement et d’opposition. Les données de votre dossier n’étant pas
+          détenues par l’éditeur, vous les exercez directement sur votre
+          appareil ; pour les données de mesure d’audience, écrivez-nous. Vous
+          pouvez saisir l’autorité de protection des données de votre pays.
+        </p>
+        <h2>7. Sécurité</h2>
+        <p>
+          Le site est servi en HTTPS avec des en-têtes de sécurité. Utilisez de
+          préférence un appareil personnel et ne partagez pas vos fichiers
+          d’export.
+        </p>
+      </div>
+      <p class="mu">
+        © 2026 Remy A. · Cybersecurity Analyst & Developer. Tous droits
+        réservés. <a href="./">Retour à l’outil</a> ·
+        <a href="confidentialite.html">Confidentialité</a> ·
+        <a href="mentions-legales.html">Mentions légales et conditions</a>
+      </p>
+    </main>
+  </body>
+</html>
