@@ -1,28 +1,28 @@
 {
- "name": "Atelier DV · Préparation Diversity Visa",
- "short_name": "Atelier DV",
- "description": "Outil gratuit pour préparer votre DV Lottery : contrôle photo, passeport, conjoint et enfants, double inscription légale, checklist. Par Remy A.",
- "lang": "fr",
- "start_url": "./",
- "scope": "./",
- "display": "standalone",
- "background_color": "#f3f5f9",
- "theme_color": "#1f4e9c",
- "icons": [
-  {
-   "src": "icon-192.png",
-   "sizes": "192x192",
-   "type": "image/png"
-  },
-  {
-   "src": "icon-512.png",
-   "sizes": "512x512",
-   "type": "image/png"
-  },
-  {
-   "src": "logo.svg",
-   "sizes": "any",
-   "type": "image/svg+xml"
-  }
- ]
+  "name": "Atelier DV · Préparation Diversity Visa",
+  "short_name": "Atelier DV",
+  "description": "Outil gratuit pour préparer votre DV Lottery : contrôle photo, passeport, conjoint et enfants, double inscription légale, checklist. Par Remy A.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f9",
+  "theme_color": "#1f4e9c",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
 }

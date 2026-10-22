@@ -1,0 +1,540 @@
+{
+  "meta": {
+    "title": "Atelier DV · Prepare your Diversity Visa entry with confidence",
+    "description": "A free tool to prepare your DV Lottery entry: photo and passport checks, spouse and children details, lawful dual entry, and a checklist. By Remy A."
+  },
+  "app": {
+    "steps": {
+      "guide": "Tips",
+      "situation": "Situation",
+      "me": "Me",
+      "spouse": "Spouse",
+      "children": "Children",
+      "checks": "Checks",
+      "summary": "Summary & tracking"
+    },
+    "ui": {
+      "skip": "Skip to content",
+      "brandSubtitle": "Diversity Visa preparation",
+      "brandAria": "Atelier DV, home",
+      "logoAria": "Atelier DV logo",
+      "stepsAria": "Steps",
+      "noScript": "Atelier DV needs JavaScript to work. Please enable it in your browser.",
+      "storageUnavailable": "Autosave failed. Check available storage and your browser’s storage settings.",
+      "faqTitle": "Frequently asked questions about the DV Lottery",
+      "saveTitle": "Save my file",
+      "saveKicker": "SECURE EXPORTS",
+      "saveHelp": "Exported files contain personal information; store them carefully.",
+      "print": "PDF / Print",
+      "printDesc": "A polished report with branding, your details and tracking.",
+      "excel": "Excel (.xlsx)",
+      "excelDesc": "A neatly arranged workbook filled with your dossier information.",
+      "exportOptions": "Export formats",
+      "shareTitle": "Share this tool",
+      "shareKicker": "SPREAD THE WORD",
+      "shareHelp": "The shared link opens a blank tool; none of your information is sent.",
+      "sharePrivacy": "Your personal information is never included in the shared link.",
+      "shareOptions": "Choose a sharing method",
+      "shareOpenDesc": "Open sharing on this platform",
+      "copyLinkDesc": "Copy the English version link",
+      "otherShareDesc": "Share using available apps",
+      "shareUrlLabel": "Link to share",
+      "consent": "Allow anonymous analytics? None of your case information is transmitted.",
+      "accept": "Accept",
+      "decline": "Decline",
+      "fieldRequired": "Marital status *",
+      "maritalOfficial": "Marital status",
+      "officialEntryField": "Official entry-form field",
+      "childrenCount": "Number of children to list",
+      "plannedEntryDate": "Planned entry date",
+      "ageHelp": "used to check children’s age",
+      "referenceDate": "Passport validity reference date",
+      "referenceHelp": "set by the administrator based on official announcements",
+      "doubleEntryTitle": "Lawful dual entry.",
+      "doubleEntryHelp": "Each spouse submits a separate entry as the principal applicant and lists the other spouse and all children. This gives the family two entries, not each person better odds. Each spouse must independently meet the education or work-experience requirement and have their own passport.",
+      "entriesTitle": "Your entries",
+      "eligibilityHelp": "If you do not have a high school diploma, you need 2 years of qualifying work experience in the past 5 years (O*NET, Job Zone 3 or higher).",
+      "experience": "I meet this work-experience requirement",
+      "experienceOfficial": "2 years of qualifying work experience",
+      "yes": "Yes",
+      "no": "No",
+      "under21": "✔ Under 21 on the planned entry date.",
+      "over21": "✖ 21 or older on the planned entry date: this child cannot be listed.",
+      "childNote": "List each unmarried child under 21: biological, adopted or stepchild, even if they will not immigrate with you.",
+      "principal": "principal",
+      "uniqueEntry": "Single entry",
+      "entry": "Entry",
+      "person": "Person",
+      "column": "Field",
+      "field": "Official field label",
+      "copyright": "© 2026 Remy A.. All rights reserved.",
+      "value": "Value",
+      "mePrincipal": "Me (principal applicant)",
+      "spousePrincipal": "Spouse (principal applicant)",
+      "me": "Me",
+      "spouse": "Spouse",
+      "childLabel": "Child",
+      "status": "Profile",
+      "marital": "Marital status",
+      "identity": "Identity",
+      "address": "Mailing address and contact",
+      "educationPassport": "Education and passport",
+      "namePassport": "Enter names exactly as shown on the passport (including the MRZ spelling). For two given names, enter the first under “First Name” and the second under “Middle Name”. Do not add a name that is not on the passport.",
+      "spouseNotPrincipal": "Your spouse is not a principal applicant: only their identity and photo are required here. Turn on dual entry in the Situation tab to prepare their own entry too.",
+      "spouseEntry1": "me (principal) + spouse",
+      "spouseEntry2": "spouse (principal) + me",
+      "singleEntry": "me (principal)",
+      "child": {
+        "one": "{count} child",
+        "other": "{count} children"
+      },
+      "principalApplicantsSame": "The two principal applicants appear to be the same person. Each person may submit only one principal entry.",
+      "passportValid": "{person}: passport valid beyond the reference date",
+      "passportExpires": "{person}: passport expires before {date}",
+      "passportExpiryMissing": "{person}: enter the passport expiry date",
+      "emailAdded": "{person}: email address entered",
+      "emailMissing": "{person}: enter an email address",
+      "educationMissing": "{person}: no qualifying education or work experience reported",
+      "educationComplete": "{person}: education or work-experience requirement met",
+      "educationMissingLevel": "{person}: enter an education level",
+      "photoWarning": "{person}, photo: {issues}",
+      "photoOk": "{person}, photo compliant",
+      "childUnder21": "Child {number}: under 21",
+      "childAdult": "Child {number}: 21 or older on the planned entry date",
+      "childBirthMissing": "Child {number}: enter a date of birth",
+      "familyCopied": "Both entries list the same family (copied automatically).",
+      "completion": "Required information complete: {percent}%",
+      "allComplete": "All required information is complete",
+      "checksTitle": "Automatic checks",
+      "checklistTitle": "Checklist · {percent}%",
+      "submissionTitle": "Entry tracking",
+      "confirmationNumber": "Confirmation number",
+      "submissionDate": "Submission date",
+      "result": "Result (Entrant Status Check)",
+      "statusPending": "Not checked yet",
+      "statusSelected": "Selected",
+      "statusNotSelected": "Not selected",
+      "feePaid": "$1 fee paid and receipt saved",
+      "copyHint": "Select a value to copy it into the official entry form.",
+      "noData": "No information entered.",
+      "profileProgress": "Required information complete: {percent}%",
+      "copied": "Link copied ✔",
+      "invalidRestore": "Invalid text: unable to restore the backup.",
+      "copySheetsHelp": "Copied. Paste into Google Sheets (Ctrl+V).",
+      "copyBlocked": "Clipboard access was blocked; the text is in the field below.",
+      "excelFallback": "Excel export unavailable; a CSV file was downloaded instead.",
+      "officialWarning": "This tool helps you prepare and check information before the official entry. It does not submit an entry for you.",
+      "guideTitle": "The rules that matter",
+      "shareMessage": "Prepare your DV Lottery entry with this free tool: ",
+      "shareSubject": "DV Lottery preparation tool",
+      "copyLink": "Copy link",
+      "otherShare": "More…",
+      "footerDisclaimer": "An unofficial preparation aid, not legal advice. Your information stays in your browser and is never sent to us. Official dates, eligible-country lists and instructions published at travel.state.gov and dvprogram.state.gov take precedence. Atelier DV is not affiliated with or endorsed by the U.S. government.",
+      "privacy": "Privacy",
+      "legal": "Legal notice & terms",
+      "analytics": "Analytics",
+      "contact": "Contact",
+      "rights": "All rights reserved.",
+      "languageAria": "Language",
+      "fileBase": "dv-file",
+      "sheetName": "DV file",
+      "listedSpouse": "Spouse listed",
+      "reportTitle": "Your DV file",
+      "reportSubtitle": "Preparation file · {session}",
+      "reportGenerated": "Generated on {date}",
+      "reportPrivacy": "Confidential document — your information stays on your device.",
+      "reportDisclaimer": "Unofficial preparation document. This is not a DV entry.",
+      "reportOverview": "Overview",
+      "reportProfiles": "Your information",
+      "reportTracking": "Entry tracking",
+      "reportChecklist": "Checklist",
+      "reportField": "Field",
+      "reportValue": "Value",
+      "reportNotProvided": "Not provided",
+      "reportDone": "Done",
+      "reportTodo": "To do",
+      "reportFeeYes": "Paid",
+      "reportFeeNo": "Check",
+      "sheetTrackingName": "Tracking",
+      "sheetChecklistName": "Checklist"
+    },
+    "workbook": {
+      "title": "DV Lottery preparation file",
+      "childTabName": "Child",
+      "entryTitle": "Entry {number} — principal applicant: {name}",
+      "childTitle": "Child {number} — listed on applicable entries",
+      "legend": "Yellow cells are for completion. Format examples are fictional. Check every item against official documents and instructions.",
+      "notCollected": "Not collected by Atelier DV.",
+      "fieldGuidance": "See the in-app guidance and check the official instructions.",
+      "passportGuidance": "Check the applicable requirements in the official instructions for the program year.",
+      "photoGuidance": "Check JPEG format, 600 × 600 px dimensions, the 240 KB maximum, and the photo date.",
+      "progress": "Form completion",
+      "verification": "Information reviewed",
+      "secondProgress": "Second principal applicant completion",
+      "childrenProgress": "Average child worksheet completion",
+      "checklistProgress": "Checklist progress",
+      "notProvided": "Not provided",
+      "headers": {
+        "official": "Official form field",
+        "local": "Label / help",
+        "value": "Information entered",
+        "example": "Format example (fictional)",
+        "required": "Required",
+        "guidance": "Guidance",
+        "verified": "Verified?"
+      },
+      "sections": {
+        "identity": "A. IDENTITY — as shown on the passport and birth certificate",
+        "address": "B. MAILING ADDRESS AND CONTACT",
+        "education": "C. EDUCATION AND MARITAL STATUS",
+        "passport": "D. PASSPORT",
+        "photo": "E. PRINCIPAL APPLICANT PHOTO",
+        "spouse": "F. SPOUSE LISTED",
+        "spouseNone": "F. NO SPOUSE LISTED",
+        "children": "G. CHILDREN LISTED — see individual worksheets"
+      },
+      "dayLabel": "Birth date — day",
+      "monthLabel": "Birth date — month",
+      "yearLabel": "Birth date — year",
+      "careOfLabel": "In care of",
+      "passportScanLabel": "Passport — scan",
+      "photoNameLabel": "Photo — file name",
+      "photoDimensionsLabel": "Photo — dimensions (px)",
+      "photoSizeLabel": "Photo — size (KB)",
+      "photoDateLabel": "Photo — date taken",
+      "passportStatusLabel": "Passport validity check",
+      "photoStatusLabel": "Photo check",
+      "childMaritalLabel": "Child’s marital status",
+      "entryDateLabel": "Planned entry date",
+      "ageStatusLabel": "Age check",
+      "ageGuidance": "Based on the planned date entered; check the official instructions.",
+      "ageUnknown": "Check — date of birth missing",
+      "ageUnder21": "Under 21 on the planned date",
+      "age21OrOlder": "21 or older on the planned date",
+      "childStatusSection": "B. MARITAL STATUS AND AGE",
+      "childPassportSection": "C. PASSPORT (optional for a child)",
+      "childPhotoSection": "D. CHILD PHOTO",
+      "passportOk": "Valid on the reference date",
+      "passportReview": "Check against the official instructions",
+      "photoOk": "In-app checks passed",
+      "photoReview": "Check — see the in-app photo checks",
+      "noChildren": "No children listed.",
+      "referenceLabel": "Configured reference date",
+      "referenceNote": "Working date configured in Atelier DV; it does not replace official instructions.",
+      "checklistTitle": "Preparation checklist",
+      "checklistNote": "Unofficial preparation aid. Statuses reflect only the boxes checked in the app.",
+      "checklistSection": "PREPARATION STEPS",
+      "checklistHeaders": {
+        "number": "No.",
+        "phase": "Step",
+        "item": "Item to check",
+        "applies": "Applies to",
+        "guidance": "Guidance",
+        "status": "Status",
+        "evidence": "Evidence / date",
+        "notes": "Notes"
+      },
+      "preparation": "Preparation",
+      "allEntries": "All entries",
+      "checklistGuidance": "Check against the official instructions.",
+      "todo": "To do",
+      "trackingTitle": "Entry tracking",
+      "trackingNote": "Enter or update tracking in Atelier DV; this workbook is a snapshot.",
+      "trackingSection": "TRACKING",
+      "trackingHeaders": {
+        "entry": "Entry",
+        "confirmation": "Confirmation number",
+        "date": "Submission date",
+        "result": "Result (Entrant Status Check)",
+        "fee": "Fee marked as paid"
+      }
+    },
+    "buttons": {
+      "share": "Share",
+      "save": "Save",
+      "reset": "Reset",
+      "confirmReset": "Confirm deletion?",
+      "previous": "← Previous",
+      "next": "Next →",
+      "close": "Close"
+    },
+    "photo": {
+      "title": "Photo: 600 × 600 px, JPEG, 240 KB maximum",
+      "file": "Photo file",
+      "local": "checked on your device, never uploaded",
+      "taken": "Date taken *",
+      "sixMonths": "less than 6 months ago",
+      "missing": "no file checked",
+      "notJpeg": "not a JPEG file",
+      "dimensions": "dimensions {width}×{height} (600×600 required)",
+      "size": "{size} KB (240 KB maximum)",
+      "missingDate": "date taken is missing",
+      "old": "photo is more than 6 months old",
+      "future": "date taken is in the future",
+      "compliant": "Compliant photo: {name}"
+    },
+    "fields": {
+      "last": {
+        "fr": "Nom de famille",
+        "en": "Family Name",
+        "help": "Enter the name exactly as shown on the passport."
+      },
+      "first": {
+        "fr": "Prénom",
+        "en": "First Name",
+        "help": "Enter the first/given name shown on the passport."
+      },
+      "middle": {
+        "fr": "Autre(s) prénom(s)",
+        "en": "Middle Name",
+        "help": "Enter any additional given names shown on the passport."
+      },
+      "gender": {
+        "fr": "Genre",
+        "en": "Gender",
+        "help": "Use the option shown on the official entry form."
+      },
+      "birthDate": {
+        "fr": "Date de naissance",
+        "en": "Birth date",
+        "help": "Enter the date in the official form’s format."
+      },
+      "birthCity": {
+        "fr": "Ville de naissance",
+        "en": "City of birth",
+        "help": "Enter the city or town where you were born."
+      },
+      "birthCountry": {
+        "fr": "Pays de naissance",
+        "en": "Country of birth",
+        "help": "Enter the country where you were born."
+      },
+      "eligibility": {
+        "fr": "Pays d’éligibilité",
+        "en": "Country of eligibility",
+        "help": "Also known as your country of chargeability."
+      },
+      "address1": {
+        "fr": "Adresse, ligne 1",
+        "en": "Address line 1",
+        "help": "Street address and house/building number."
+      },
+      "address2": {
+        "fr": "Adresse, ligne 2",
+        "en": "Address line 2",
+        "help": "Apartment, suite or unit, if applicable."
+      },
+      "city": {
+        "fr": "Ville",
+        "en": "City",
+        "help": "Enter your current mailing city."
+      },
+      "region": {
+        "fr": "Région / district",
+        "en": "District / Province",
+        "help": "Enter your state, province, region or district."
+      },
+      "postal": {
+        "fr": "Code postal (00000 si aucun)",
+        "en": "Postal code",
+        "help": "Enter the postal code, or 00000 if none is used."
+      },
+      "country": {
+        "fr": "Pays de l’adresse",
+        "en": "Country",
+        "help": "Select the country for your mailing address."
+      },
+      "residence": {
+        "fr": "Pays de résidence actuel",
+        "en": "Country where you live today",
+        "help": "Enter your current country of residence."
+      },
+      "phone": {
+        "fr": "Téléphone",
+        "en": "Phone",
+        "help": "Optional; include the country calling code."
+      },
+      "email": {
+        "fr": "E-mail personnel",
+        "en": "E-mail",
+        "help": "Use an email account you can access throughout the process."
+      },
+      "education": {
+        "fr": "Niveau d’études",
+        "en": "Highest education",
+        "help": "Choose the highest level that accurately applies."
+      },
+      "passportNumber": {
+        "fr": "Passeport : numéro",
+        "en": "Passport number",
+        "help": "Copy the number exactly as printed on your passport."
+      },
+      "passportCountry": {
+        "fr": "Passeport : pays de délivrance",
+        "en": "Issuing country",
+        "help": "Select the country that issued the passport."
+      },
+      "passportExpiry": {
+        "fr": "Passeport : date d’expiration",
+        "en": "Expiry date",
+        "help": "Enter the expiry date shown on the passport."
+      },
+      "relationship": {
+        "fr": "Lien avec vous",
+        "en": "Relationship",
+        "help": "Select the child’s relationship to you."
+      }
+    },
+    "education": {
+      "primary": {
+        "fr": "École primaire uniquement",
+        "en": "Primary school only"
+      },
+      "someHighSchool": {
+        "fr": "Secondaire commencé, sans diplôme (ni BEPC ni Bac)",
+        "en": "Some high school, no diploma"
+      },
+      "highSchool": {
+        "fr": "Baccalauréat ou fin du secondaire (12 ans)",
+        "en": "High school diploma — 12 years of secondary school, e.g. Baccalauréat, WASSCE, GCE A-Levels or a U.S. high school diploma"
+      },
+      "vocational": {
+        "fr": "École professionnelle ou technique (CAP, BEP, Bac technique)",
+        "en": "Vocational school"
+      },
+      "someUniversity": {
+        "fr": "Études universitaires sans diplôme",
+        "en": "Some university courses"
+      },
+      "degree": {
+        "fr": "Licence / Bachelor (bac+3), DUT, BTS ou équivalent",
+        "en": "University degree — bachelor’s degree (3–4 years), e.g. Licence, BSc, BA or HND"
+      },
+      "someGraduate": {
+        "fr": "3e cycle commencé, sans diplôme",
+        "en": "Some graduate level courses"
+      },
+      "masters": {
+        "fr": "Master, maîtrise ou ingénieur (bac+5)",
+        "en": "Master’s degree"
+      },
+      "someDoctorate": {
+        "fr": "Doctorat commencé, sans diplôme",
+        "en": "Some doctoral level courses"
+      },
+      "doctorate": {
+        "fr": "Doctorat",
+        "en": "Doctorate degree"
+      }
+    },
+    "status": {
+      "unmarried": {
+        "label": "Unmarried",
+        "help": "You do not need to list a spouse. List all eligible children."
+      },
+      "married": {
+        "label": "Married and my spouse is NOT a U.S. citizen or U.S. LPR",
+        "help": "You must list your spouse, even if they will not immigrate with you. Each spouse may submit a separate entry as the principal applicant."
+      },
+      "marriedus": {
+        "label": "Married and my spouse IS a U.S. citizen or U.S. LPR",
+        "help": "A spouse who is already a U.S. citizen or lawful permanent resident must not be listed."
+      },
+      "divorced": {
+        "label": "Divorced",
+        "help": "You do not need to list a spouse. Include qualifying stepchildren from a previous marriage."
+      },
+      "widowed": {
+        "label": "Widowed",
+        "help": "You do not need to list a spouse. List all eligible children."
+      },
+      "separated": {
+        "label": "Legally Separated",
+        "help": "Do not list a spouse if you are legally separated by formal court order. Informal separation does not qualify; seek legal advice."
+      }
+    },
+    "checklist": [
+      "Read the official instructions, dates and eligible-country list at dvprogram.state.gov",
+      "Valid passport(s) and JPEG scans of the identity and signature pages are ready",
+      "Birth certificates and civil documents gathered",
+      "Secure personal email account (strong password and two-factor authentication)",
+      "Budgeted $1 per entry (online payment)",
+      "Entry will be submitted only at dvprogram.state.gov, without an intermediary",
+      "Reviewed every field carefully before submitting",
+      "Saved confirmation(s) offline (PDF, number and date of birth)",
+      "Will check results only through Entrant Status Check",
+      "If selected: DS-260, visa fees, civil documents, police certificates and medical exam",
+      "If both entries are selected: confirm with the consulate the single procedure to follow"
+    ],
+    "guide": [
+      [
+        "There is no magic formula",
+        "The draw is random: no agent, software or “method” can improve your odds. Your only control is submitting a valid entry and being ready if selected."
+      ],
+      [
+        "One principal entry per person",
+        "Duplicate entries disqualify all your entries. A married couple may each submit one lawful entry as the principal applicant."
+      ],
+      [
+        "List your entire family",
+        "List your spouse and all unmarried children under 21, even if they will not immigrate with you. Omissions can lead to a visa refusal for the whole family."
+      ],
+      [
+        "Use the name on your passport",
+        "Keep the same spelling, order and name fields everywhere (entry, DS-260 and documents). A valid passport is required for the principal applicant from DV-2027."
+      ],
+      [
+        "Photo: a common pitfall",
+        "600 × 600 px, JPEG, maximum 240 KB, taken within 6 months, plain background, no filters or retouching. Have it taken by a professional."
+      ],
+      [
+        "Education: a high school diploma qualifies",
+        "High school completion (12 years), or 2 years of qualifying work experience within the past 5 years (O*NET, Job Zone 3 or higher)."
+      ],
+      [
+        "Your email, your confirmation",
+        "If someone helps you complete the entry, keep your own email and confirmation number. Without them, you cannot check the result."
+      ],
+      [
+        "Use the official website only",
+        "dvprogram.state.gov. Official emails do not announce a win, and no one can guarantee selection. Entry fee: $1 per entry."
+      ],
+      [
+        "Get ready before selection",
+        "Birth and marriage certificates, diplomas, police certificates and valid passports: timelines after selection can be short."
+      ]
+    ],
+    "faq": [
+      [
+        "What is the DV Lottery (Diversity Visa)?",
+        "The U.S. government’s annual program makes immigrant visas available through a random draw to people born in countries with historically low immigration to the United States. Entries are submitted only at dvprogram.state.gov."
+      ],
+      [
+        "Who can participate?",
+        "You must be born in an eligible country (or qualify through a spouse or parent under chargeability rules) and have a high school education or qualifying work experience in the past 5 years (O*NET). A valid passport is required for the principal applicant starting with DV-2027."
+      ],
+      [
+        "Can a married couple submit two entries?",
+        "Yes. Each spouse may submit a separate entry as the principal applicant and list the other spouse and all eligible children. This gives the family two entries, not each person better odds. Each person may submit only one principal entry."
+      ],
+      [
+        "What are the photo requirements?",
+        "JPEG, 600 × 600 pixels, no more than 240 KB, taken within 6 months, plain background, no filters or retouching. Atelier DV checks your file on your device; it is never uploaded."
+      ],
+      [
+        "When does registration open?",
+        "Dates vary by program year and are announced by the Department of State. Check travel.state.gov. Atelier DV displays official announcements when they are published."
+      ],
+      [
+        "Does Atelier DV submit an entry for me?",
+        "No. The tool helps you prepare, check and organize your information. You submit your entry yourself at dvprogram.state.gov. Atelier DV is not affiliated with or endorsed by the U.S. government."
+      ]
+    ],
+    "legacy": {
+      "yes": "Oui",
+      "notVerified": "Pas encore vérifié",
+      "selected": "Sélectionné",
+      "notSelected": "Non sélectionné"
+    }
+  }
+}

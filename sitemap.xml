@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://win-dv.onrender.com/</loc><lastmod>2026-10-21</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://win-dv.onrender.com/confidentialite.html</loc><lastmod>2026-10-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://win-dv.onrender.com/mentions-legales.html</loc><lastmod>2026-10-21</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://win-dv.onrender.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://win-dv.onrender.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://win-dv.onrender.com/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://win-dv.onrender.com/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://win-dv.onrender.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://win-dv.onrender.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://win-dv.onrender.com/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://win-dv.onrender.com/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://win-dv.onrender.com/confidentialite.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://win-dv.onrender.com/confidentialite.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://win-dv.onrender.com/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://win-dv.onrender.com/confidentialite.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://win-dv.onrender.com/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://win-dv.onrender.com/confidentialite.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://win-dv.onrender.com/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://win-dv.onrender.com/confidentialite.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://win-dv.onrender.com/mentions-legales.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://win-dv.onrender.com/mentions-legales.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://win-dv.onrender.com/en/legal-notice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://win-dv.onrender.com/mentions-legales.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://win-dv.onrender.com/en/legal-notice.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://win-dv.onrender.com/mentions-legales.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://win-dv.onrender.com/en/legal-notice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://win-dv.onrender.com/mentions-legales.html" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
