@@ -741,7 +741,7 @@
       @media print {
         @page {
           size: A4 portrait;
-          margin: 10mm 12mm;
+          margin: 16mm;
         }
         body.printing-report > header,
         body.printing-report > nav,
@@ -759,7 +759,7 @@
         body.printing-report #print-report {
           display: block !important;
           width: 100%;
-          max-width: 182mm;
+          max-width: 178mm;
           margin: 0 auto;
           color: #172338;
           background: #fff;
